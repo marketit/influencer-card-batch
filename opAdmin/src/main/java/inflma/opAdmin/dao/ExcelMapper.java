@@ -8,4 +8,6 @@ import java.util.List;
 @Mapper
 public interface ExcelMapper {
     List<HashMap<String, Object>> transactionRequestExcel(HashMap<String, Object> param);
+
+    void completeTransactionRequest(HashMap<String, Object> param);
 }

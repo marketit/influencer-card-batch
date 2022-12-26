@@ -11,7 +11,13 @@
             actual_refund,
             tax_fee
         FROM account_transaction_request
-        where state = 0 and Date(created_at) <![CDATA[<=]]> #{requestDate}
-        order by created_at desc
+        WHERE state = 0 AND Date(created_at) <![CDATA[<=]]> #{requestDate}
+        ORDER BY created_at DESC
     </select>
+
+    <update id="completeTransactionRequest">
+        UPDATE account_transaction_request
+        SET state = 1 , paid_at = now()
+        WHERE state = 0 AND DATE(created_at) = #{requestDate}
+    </update>
 </mapper>

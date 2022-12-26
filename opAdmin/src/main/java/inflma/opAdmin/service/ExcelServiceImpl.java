@@ -15,4 +15,8 @@ public class ExcelServiceImpl {
     public List<HashMap<String,Object>> transactionRequestExcel(HashMap<String,Object> param){
         return excelMapper.transactionRequestExcel(param);
     }
+
+    public void completeTransactionRequest(HashMap<String,Object> param) {
+        excelMapper.completeTransactionRequest(param);
+    }
 }

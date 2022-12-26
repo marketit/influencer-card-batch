@@ -35,7 +35,14 @@ public class ExcelController {
         transactionRequestExcelData(response, header, body);
     }
 
-    private void transactionRequestExcelData(HttpServletResponse response, List<String> header, List<HashMap<String, Object>> body) throws FileNotFoundException, IOException, IllegalAccessException {
+    @GetMapping(value="/marketit/complete/transaction-request")
+    public void completeTransactionRequest(
+            @RequestParam HashMap<String, Object> param
+    ){
+        excelService.completeTransactionRequest(param);
+    }
+
+    private void transactionRequestExcelData(HttpServletResponse response, List<String> header, List<HashMap<String, Object>> body) throws IOException {
         Workbook wb = new HSSFWorkbook();
         Sheet sheet = wb.createSheet("첫번째 시트");
         Row row = null;
