@@ -30,7 +30,7 @@ public class ExcelController {
             @RequestParam HashMap<String, Object> param
     ) throws IOException, IllegalAccessException {
         List<HashMap<String, Object>> body = excelService.transactionRequestExcel(param);
-        List<String> header = Arrays.asList("은행명", "계좌번호", "이름", "요청한 금액", "세금후 금액", "세금");
+        List<String> header = Arrays.asList("은행명", "계좌번호", "이름", "요청한 금액", "","","","일련번호");
 
         transactionRequestExcelData(response, header, body);
     }
@@ -83,9 +83,19 @@ public class ExcelController {
                 cell = row.createCell(cellCnt++);
                 cell.setCellValue(body.get(i).get("actual_refund").toString());
             }
-            if (body.get(i).get("tax_fee") != null) {
+            if (body.get(i).get("message") != null) {
                 cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("tax_fee").toString());
+                cell.setCellValue(body.get(i).get("message").toString());
+            }
+            cell = row.createCell(cellCnt++);
+            cell.setCellValue("");
+            cell = row.createCell(cellCnt++);
+            cell.setCellValue("");
+            cell = row.createCell(cellCnt++);
+            cell.setCellValue("");
+            if (body.get(i).get("request_id") != null) {
+                cell = row.createCell(cellCnt++);
+                cell.setCellValue(body.get(i).get("request_id").toString());
             }
 
         }

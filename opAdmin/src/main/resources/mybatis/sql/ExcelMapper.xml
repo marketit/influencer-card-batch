@@ -5,11 +5,11 @@
     <select id="transactionRequestExcel" parameterType="map" resultType="map">
         SELECT
             REPLACE ( REPLACE ( REPLACE( REPLACE ( request_info -> '$.bank' , '"', '') ,"(주택)", '') , '(외환)', '') ,'(조흥)', '')as bank ,
+            actual_refund,
             REPLACE ( request_info -> '$.account' , '"','') as account,
             REPLACE ( request_info -> '$.accountName', '"', '') as name,
-            request_price,
-            actual_refund,
-            tax_fee
+            request_id,
+            "마켓잇 적립금" as message
         FROM account_transaction_request
         WHERE state = 0 AND Date(created_at) <![CDATA[<=]]> #{requestDate}
         ORDER BY created_at DESC
