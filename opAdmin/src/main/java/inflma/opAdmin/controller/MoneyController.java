@@ -40,7 +40,7 @@ public class MoneyController {
     @GetMapping(value="refusal")
     public void refusalTransactionRequest(
             @RequestParam HashMap<String, Object> param
-    ){
+    ) throws IOException {
         excelService.refusalTransactionRequest(param);
     }
 
