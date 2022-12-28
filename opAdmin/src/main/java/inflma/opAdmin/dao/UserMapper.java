@@ -7,5 +7,5 @@ import java.util.HashMap;
 @Mapper
 public interface UserMapper {
 
-    String findByUserPushId(HashMap<String, Object> param);
+    String findByUserPushId(java.util.HashMap<java.lang.String,java.lang.Object> param);
 }

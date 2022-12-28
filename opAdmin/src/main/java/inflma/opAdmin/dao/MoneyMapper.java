@@ -11,5 +11,5 @@ public interface MoneyMapper {
 
     void completeTransactionRequest(HashMap<String, Object> param);
 
-    void refusalTransactionRequest(HashMap<String, Object> param);
+    void refusalTransactionRequest(java.util.HashMap<java.lang.String,java.lang.Object> param);
 }

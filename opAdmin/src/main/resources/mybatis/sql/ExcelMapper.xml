@@ -27,10 +27,5 @@
         WHERE request_id = #{request_id}
     </update>
 
-    <select id="findByUserPushId" resultType="map" parameterType="String">
-        SELECT pushId
-        FROM users u
-            INNER JOIN account_transaction_request atr ON u.userId = atr.user_id
-        WHERE atr.request_id = #{request_id};
-    </select>
+
 </mapper>
