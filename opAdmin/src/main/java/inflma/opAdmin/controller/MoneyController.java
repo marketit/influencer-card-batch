@@ -1,6 +1,7 @@
 package inflma.opAdmin.controller;
 
-import inflma.opAdmin.service.ExcelServiceImpl;
+import inflma.opAdmin.service.MoneyServiceImpl;
+import inflma.opAdmin.util.FirebaseCloudMessageService;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -8,6 +9,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,11 +21,12 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-public class ExcelController {
+@RequestMapping("transaction-request")
+public class MoneyController {
 
-    private final ExcelServiceImpl excelService;
+    private final MoneyServiceImpl excelService;
 
-    @GetMapping(value = "/marketit/transaction-request")
+    @GetMapping(value = "excel")
     public void transactionRequestExcel(
             HttpServletResponse response,
             @RequestParam HashMap<String, Object> param
@@ -34,7 +37,14 @@ public class ExcelController {
         transactionRequestExcelData(response, header, body);
     }
 
-    @GetMapping(value="/marketit/complete/transaction-request")
+    @GetMapping(value="refusal")
+    public void refusalTransactionRequest(
+            @RequestParam HashMap<String, Object> param
+    ){
+        excelService.refusalTransactionRequest(param);
+    }
+
+    @GetMapping(value="complete")
     public void completeTransactionRequest(
             @RequestParam HashMap<String, Object> param
     ){

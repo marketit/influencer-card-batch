@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="inflma.opAdmin.dao.ExcelMapper">
-    <select id="transactionRequestExcel" parameterType="map" resultType="map">
+<mapper namespace="inflma.opAdmin.dao.MoneyMapper">
+    <select id="transactionRequestExcel">
         SELECT
             REPLACE ( REPLACE ( REPLACE( REPLACE ( request_info -> '$.bank' , '"', '') ,"(주택)", '') , '(외환)', '') ,'(조흥)', '')as bank ,
             actual_refund,
@@ -19,5 +19,11 @@
         UPDATE account_transaction_request
         SET state = 1 , paid_at = now()
         WHERE state = 0
+    </update>
+
+    <update id="refusalTransactionRequest" parameterType="map">
+        UPDATE account_transaction_request
+        SET state = -2
+        WHERE request_id = #{request_id}
     </update>
 </mapper>

@@ -6,8 +6,10 @@ import java.util.HashMap;
 import java.util.List;
 
 @Mapper
-public interface ExcelMapper {
+public interface MoneyMapper {
     List<HashMap<String, Object>> transactionRequestExcel(HashMap<String, Object> param);
 
     void completeTransactionRequest(HashMap<String, Object> param);
+
+    void refusalTransactionRequest(HashMap<String, Object> param);
 }
