@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -28,7 +27,7 @@ public class ExcelController {
     public void transactionRequestExcel(
             HttpServletResponse response,
             @RequestParam HashMap<String, Object> param
-    ) throws IOException, IllegalAccessException {
+    ) throws IOException {
         List<HashMap<String, Object>> body = excelService.transactionRequestExcel(param);
         List<String> header = Arrays.asList("은행명", "계좌번호", "이름", "요청한 금액", "","","","일련번호");
 
@@ -45,8 +44,8 @@ public class ExcelController {
     private void transactionRequestExcelData(HttpServletResponse response, List<String> header, List<HashMap<String, Object>> body) throws IOException {
         Workbook wb = new HSSFWorkbook();
         Sheet sheet = wb.createSheet("첫번째 시트");
-        Row row = null;
-        Cell cell =  null;
+        Row row;
+        Cell cell;
         int rowNum = 0;
 
         // Header
@@ -109,4 +108,5 @@ public class ExcelController {
         wb.write(response.getOutputStream());
         wb.close();
     }
+
 }
