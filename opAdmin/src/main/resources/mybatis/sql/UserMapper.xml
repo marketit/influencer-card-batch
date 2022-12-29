@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="inflma.opAdmin.dao.MoneyMapper" >
+<mapper namespace="inflma.opAdmin.dao.UserMapper" >
     <select id="findByUserPushId" resultType="map" parameterType="String">
         SELECT pushId
         FROM users u

@@ -14,5 +14,10 @@
         <typeAlias alias="map" type="java.util.Map"/>
         <typeAlias alias="string" type="java.lang.String"/>
         <typeAlias alias="int" type="java.lang.Integer"/>
+        <typeAlias alias="DashboardDto" type="kr.influencercard.dto.page.DashboardDto"/>
     </typeAliases>
+
+    <typeHandlers>
+        <typeHandler javaType="kr.influencercard.domain.admin.Position" handler="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
+    </typeHandlers>
 </configuration>

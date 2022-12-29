@@ -24,14 +24,14 @@ import java.util.List;
 @RequestMapping("transaction-request")
 public class MoneyController {
 
-    private final MoneyServiceImpl excelService;
+    private final MoneyServiceImpl moneyService;
 
     @GetMapping(value = "excel")
     public void transactionRequestExcel(
             HttpServletResponse response,
             @RequestParam HashMap<String, Object> param
     ) throws IOException {
-        List<HashMap<String, Object>> body = excelService.transactionRequestExcel(param);
+        List<HashMap<String, Object>> body = moneyService.transactionRequestExcel(param);
         List<String> header = Arrays.asList("은행명", "계좌번호", "이름", "요청한 금액", "","","","일련번호");
 
         transactionRequestExcelData(response, header, body);
@@ -41,14 +41,14 @@ public class MoneyController {
     public void refusalTransactionRequest(
             @RequestParam HashMap<String, Object> param
     ) throws IOException {
-        excelService.refusalTransactionRequest(param);
+        moneyService.refusalTransactionRequest(param);
     }
 
     @GetMapping(value="complete")
     public void completeTransactionRequest(
             @RequestParam HashMap<String, Object> param
     ){
-        excelService.completeTransactionRequest(param);
+        moneyService.completeTransactionRequest(param);
     }
 
     private void transactionRequestExcelData(HttpServletResponse response, List<String> header, List<HashMap<String, Object>> body) throws IOException {

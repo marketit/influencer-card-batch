@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="inflma.opAdmin.dao.MoneyMapper" >
-    <select id="transactionRequestExcel" resultType="map">
+    <select id="transactionRequestExcel" resultType="map" parameterType="map">
         SELECT
             REPLACE ( REPLACE ( REPLACE( REPLACE ( request_info -> '$.bank' , '"', '') ,"(주택)", '') , '(외환)', '') ,'(조흥)', '')as bank ,
             actual_refund,

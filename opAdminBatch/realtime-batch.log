@@ -1,0 +1,463 @@
+2022-12-29 19:04:15.010  INFO 89928 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 89928 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:04:15.017  INFO 89928 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:04:17.797  INFO 89928 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:04:17.798  INFO 89928 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:04:17.974  INFO 89928 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:04:18.606  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 471ms} 
+2022-12-29 19:04:18.607  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:04:18.608  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:04:18.618  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:04:18.619  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:04:18.627  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:04:18.637  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:04:18.663  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@4cdc3780
+2022-12-29 19:04:18.668  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:04:18.707  INFO 89928 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:04:18.751  INFO 89928 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:04:18.878  INFO 89928 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:04:18.947  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@b31f7d0
+2022-12-29 19:04:18.957  INFO 89928 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:04:18.994  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:04:19.006  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:04:19.006  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:04:19.019  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7fd46a66
+2022-12-29 19:04:19.021  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@196da4ae
+2022-12-29 19:04:19.023  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:04:19.137  INFO 89928 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:04:19.152  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@780aab84
+2022-12-29 19:04:19.152  INFO 89928 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:04:19.427  INFO 89928 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 64ms} 
+2022-12-29 19:04:19.429  INFO 89928 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:04:19.432  INFO 89928 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:08:41.640  INFO 90195 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 90195 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:08:41.641  INFO 90195 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:08:43.484  INFO 90195 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:08:43.484  INFO 90195 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:08:43.604  INFO 90195 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:08:44.152  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 413ms} 
+2022-12-29 19:08:44.153  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:08:44.153  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:08:44.161  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:08:44.161  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:08:44.171  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:08:44.180  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:08:44.205  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@45891718
+2022-12-29 19:08:44.209  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:08:44.237  INFO 90195 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:08:44.273  INFO 90195 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:08:44.372  INFO 90195 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:08:44.433  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@22e0da08
+2022-12-29 19:08:44.438  INFO 90195 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:08:44.471  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:08:44.481  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:08:44.481  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:08:44.493  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@5cb74524
+2022-12-29 19:08:44.494  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@d459da6
+2022-12-29 19:08:44.495  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:08:44.576  INFO 90195 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:08:44.586  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3b06a28f
+2022-12-29 19:08:44.586  INFO 90195 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:08:44.790  INFO 90195 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 13ms} 
+2022-12-29 19:08:44.792  INFO 90195 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:08:44.795  INFO 90195 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:10:03.459  INFO 90311 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 90311 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:10:03.461  INFO 90311 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:10:05.597  INFO 90311 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:10:05.598  INFO 90311 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:10:05.732  INFO 90311 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:10:06.398  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 494ms} 
+2022-12-29 19:10:06.399  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:10:06.399  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:10:06.408  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:10:06.409  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:10:06.417  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:10:06.427  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:10:06.452  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2a18a1b5
+2022-12-29 19:10:06.457  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:10:06.491  INFO 90311 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:10:06.536  INFO 90311 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:10:06.652  INFO 90311 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:10:06.719  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@5a65a922
+2022-12-29 19:10:06.725  INFO 90311 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:10:06.767  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:10:06.780  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:10:06.780  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:10:06.793  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6683f6da
+2022-12-29 19:10:06.795  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@164f79d7
+2022-12-29 19:10:06.796  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:10:06.882  INFO 90311 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:10:06.892  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@64345527
+2022-12-29 19:10:06.892  INFO 90311 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:10:07.070  INFO 90311 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 14ms} 
+2022-12-29 19:10:07.072  INFO 90311 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:10:07.074  INFO 90311 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:11:38.070  INFO 90474 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 90474 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:11:38.076  INFO 90474 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:11:39.770  INFO 90474 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:11:39.771  INFO 90474 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:11:39.885  INFO 90474 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:11:40.358  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 342ms} 
+2022-12-29 19:11:40.358  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:11:40.358  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:11:40.366  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:11:40.367  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:11:40.376  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:11:40.384  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:11:40.408  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@58324102
+2022-12-29 19:11:40.412  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:11:40.438  INFO 90474 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:11:40.473  INFO 90474 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:11:40.574  INFO 90474 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:11:40.634  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@769802f9
+2022-12-29 19:11:40.639  INFO 90474 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:11:40.673  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:11:40.683  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:11:40.683  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:11:40.694  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@d0d463f
+2022-12-29 19:11:40.695  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@abb7cc5
+2022-12-29 19:11:40.697  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:11:40.783  INFO 90474 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:11:40.793  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@4a07a8a3
+2022-12-29 19:11:40.793  INFO 90474 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:11:40.988  INFO 90474 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 13ms} 
+2022-12-29 19:11:40.989  INFO 90474 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:11:40.992  INFO 90474 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:20:24.637  INFO 91152 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91152 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:20:24.638  INFO 91152 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:20:26.284  INFO 91152 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:20:26.284  INFO 91152 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:20:26.400  INFO 91152 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:20:26.987  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 453ms} 
+2022-12-29 19:20:26.987  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:20:26.988  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:20:26.996  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:20:26.997  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:20:27.005  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:20:27.014  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:20:27.041  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@5cf7219c
+2022-12-29 19:20:27.045  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:20:27.072  INFO 91152 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:20:27.105  INFO 91152 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:20:27.195  INFO 91152 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:20:27.260  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3616d19b
+2022-12-29 19:20:27.265  INFO 91152 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:20:27.297  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:20:27.307  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:20:27.308  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:20:27.320  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3683af3a
+2022-12-29 19:20:27.321  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@6dd98e2d
+2022-12-29 19:20:27.323  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:20:27.402  INFO 91152 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:20:27.412  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3ca7fc9d
+2022-12-29 19:20:27.412  INFO 91152 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:20:27.617  INFO 91152 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 14ms} 
+2022-12-29 19:20:27.619  INFO 91152 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:20:27.622  INFO 91152 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:23:00.936  INFO 91371 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91371 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:23:00.937  INFO 91371 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:23:02.589  INFO 91371 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:23:02.590  INFO 91371 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:23:02.703  INFO 91371 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:23:03.196  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 357ms} 
+2022-12-29 19:23:03.197  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:23:03.197  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:23:03.206  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:23:03.207  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:23:03.215  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:23:03.224  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:23:03.250  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7e47dfbf
+2022-12-29 19:23:03.254  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:23:03.280  INFO 91371 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:23:03.321  INFO 91371 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:23:03.430  INFO 91371 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:23:03.492  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@37f8a980
+2022-12-29 19:23:03.497  INFO 91371 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:23:03.541  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:23:03.555  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:23:03.555  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:23:03.563  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@4aecd648
+2022-12-29 19:23:03.564  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@5c92f172
+2022-12-29 19:23:03.565  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:23:03.653  INFO 91371 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:23:03.664  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@4df22c4a
+2022-12-29 19:23:03.664  INFO 91371 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:23:03.856  INFO 91371 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 10ms} 
+2022-12-29 19:23:03.857  INFO 91371 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:23:03.859  INFO 91371 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:23:45.285  INFO 91435 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91435 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:23:45.286  INFO 91435 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:23:46.926  INFO 91435 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:23:46.926  INFO 91435 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:23:47.052  INFO 91435 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:23:47.550  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 368ms} 
+2022-12-29 19:23:47.550  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:23:47.550  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:23:47.560  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:23:47.560  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:23:47.570  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:23:47.580  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:23:47.605  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@79fa11dd
+2022-12-29 19:23:47.609  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:23:47.636  INFO 91435 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:23:47.670  INFO 91435 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:23:47.763  INFO 91435 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:23:47.824  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2b7507d9
+2022-12-29 19:23:47.831  INFO 91435 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:23:47.866  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:23:47.877  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:23:47.877  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:23:47.887  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@16b8963b
+2022-12-29 19:23:47.888  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@180d147a
+2022-12-29 19:23:47.889  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:23:47.970  INFO 91435 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:23:47.980  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@47d9ca8e
+2022-12-29 19:23:47.980  INFO 91435 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:23:48.161  INFO 91435 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 14ms} 
+2022-12-29 19:23:48.163  INFO 91435 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:23:48.165  INFO 91435 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:24:49.974  INFO 91540 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91540 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:24:49.976  INFO 91540 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:24:51.763  INFO 91540 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:24:51.763  INFO 91540 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:24:51.899  INFO 91540 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:24:52.447  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 406ms} 
+2022-12-29 19:24:52.448  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:24:52.448  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:24:52.458  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:24:52.458  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:24:52.467  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:24:52.476  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:24:52.502  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@63c74159
+2022-12-29 19:24:52.506  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:24:52.532  INFO 91540 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:24:52.570  INFO 91540 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:24:52.664  INFO 91540 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:24:52.726  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@12c57f33
+2022-12-29 19:24:52.743  INFO 91540 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:24:52.781  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:24:52.795  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:24:52.795  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:24:52.812  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6c5060df
+2022-12-29 19:24:52.814  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@284a040b
+2022-12-29 19:24:52.816  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:24:52.911  INFO 91540 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:24:52.925  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@27004f26
+2022-12-29 19:24:52.925  INFO 91540 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:24:53.144  INFO 91540 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 11ms} 
+2022-12-29 19:24:53.146  INFO 91540 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:24:53.149  INFO 91540 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:25:15.279  INFO 91577 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91577 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:25:15.282  INFO 91577 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:25:17.449  INFO 91577 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:25:17.452  INFO 91577 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:25:17.583  INFO 91577 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:25:18.089  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 367ms} 
+2022-12-29 19:25:18.090  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:25:18.090  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:25:18.099  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:25:18.099  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:25:18.108  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:25:18.117  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:25:18.143  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2a3cf42
+2022-12-29 19:25:18.147  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:25:18.180  INFO 91577 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:25:18.222  INFO 91577 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:25:18.330  INFO 91577 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:25:18.400  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7c2d8241
+2022-12-29 19:25:18.405  INFO 91577 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:25:18.437  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:25:18.447  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:25:18.447  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:25:18.459  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@259e00e7
+2022-12-29 19:25:18.460  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@31c86826
+2022-12-29 19:25:18.461  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:25:18.545  INFO 91577 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:25:18.555  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2c6c980b
+2022-12-29 19:25:18.555  INFO 91577 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:25:18.742  INFO 91577 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 11ms} 
+2022-12-29 19:25:18.744  INFO 91577 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:25:18.746  INFO 91577 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:26:47.129  INFO 91741 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91741 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:26:47.130  INFO 91741 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:26:48.938  INFO 91741 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:26:48.951  INFO 91741 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:26:49.064  INFO 91741 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:26:49.590  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 386ms} 
+2022-12-29 19:26:49.591  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:26:49.592  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:26:49.601  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:26:49.601  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:26:49.610  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:26:49.619  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:26:49.648  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@522a8906
+2022-12-29 19:26:49.652  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:26:49.680  INFO 91741 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:26:49.721  INFO 91741 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:26:49.833  INFO 91741 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:26:49.900  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@3c5f3de4
+2022-12-29 19:26:49.906  INFO 91741 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:26:49.947  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:26:49.959  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:26:49.959  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:26:49.971  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@2767015
+2022-12-29 19:26:49.972  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@7ed7
+2022-12-29 19:26:49.974  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:26:50.084  INFO 91741 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:26:50.095  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@295ba39f
+2022-12-29 19:26:50.095  INFO 91741 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:26:51.122  INFO 91741 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Started OpAdminBatchApplication in 4.561 seconds (JVM running for 5.558)
+2022-12-29 19:26:59.322  INFO 91741 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 11ms} 
+2022-12-29 19:26:59.324  INFO 91741 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:27:07.233  INFO 91763 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91763 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:27:07.235  INFO 91763 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:27:09.022  INFO 91763 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:27:09.023  INFO 91763 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:27:09.158  INFO 91763 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:27:09.700  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 397ms} 
+2022-12-29 19:27:09.701  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:27:09.701  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:27:09.709  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:27:09.710  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:27:09.718  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:27:09.726  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:27:09.770  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@33b27696
+2022-12-29 19:27:09.775  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:27:09.804  INFO 91763 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:27:09.849  INFO 91763 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:27:09.980  INFO 91763 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:27:10.041  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@34287164
+2022-12-29 19:27:10.046  INFO 91763 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:27:10.078  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:27:10.089  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:27:10.090  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:27:10.102  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@45d4b3e0
+2022-12-29 19:27:10.103  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@682f109
+2022-12-29 19:27:10.104  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:27:10.201  INFO 91763 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:27:10.212  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@333c0943
+2022-12-29 19:27:10.212  INFO 91763 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:27:10.411  INFO 91763 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 10ms} 
+2022-12-29 19:27:10.413  INFO 91763 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:27:10.415  INFO 91763 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:27:40.277  INFO 91799 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91799 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:27:40.280  INFO 91799 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:27:42.087  INFO 91799 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:27:42.088  INFO 91799 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:27:42.201  INFO 91799 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:27:42.733  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 384ms} 
+2022-12-29 19:27:42.734  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:27:42.734  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:27:42.743  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:27:42.743  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:27:42.752  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:27:42.762  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:27:42.788  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6e603780
+2022-12-29 19:27:42.792  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:27:42.821  INFO 91799 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:27:42.860  INFO 91799 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:27:42.965  INFO 91799 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:27:43.025  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@11c70bc3
+2022-12-29 19:27:43.030  INFO 91799 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:27:43.063  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:27:43.074  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:27:43.074  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:27:43.088  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@75d7cfab
+2022-12-29 19:27:43.089  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@4d4bfbc8
+2022-12-29 19:27:43.091  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:27:43.187  INFO 91799 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:27:43.198  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@630f40f1
+2022-12-29 19:27:43.198  INFO 91799 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:27:43.394  INFO 91799 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 11ms} 
+2022-12-29 19:27:43.396  INFO 91799 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:27:43.399  INFO 91799 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:28:12.419  INFO 91834 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91834 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:28:12.421  INFO 91834 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:28:14.266  INFO 91834 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:28:14.267  INFO 91834 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:28:14.386  INFO 91834 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:28:14.931  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 404ms} 
+2022-12-29 19:28:14.931  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:28:14.932  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:28:14.940  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:28:14.941  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:28:14.950  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:28:14.960  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:28:14.989  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@36a0af98
+2022-12-29 19:28:14.994  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:28:15.024  INFO 91834 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:28:15.065  INFO 91834 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:28:15.167  INFO 91834 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:28:15.233  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@19ed62d7
+2022-12-29 19:28:15.238  INFO 91834 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:28:15.278  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:28:15.288  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:28:15.288  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:28:15.301  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@241db2f8
+2022-12-29 19:28:15.302  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@4a3f8422
+2022-12-29 19:28:15.304  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:28:15.395  INFO 91834 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:28:15.406  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@246db339
+2022-12-29 19:28:15.406  INFO 91834 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:28:15.610  INFO 91834 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 13ms} 
+2022-12-29 19:28:15.612  INFO 91834 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:28:15.615  INFO 91834 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-29 19:30:04.343  INFO 91947 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 91947 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:30:04.345  INFO 91947 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:30:06.017  INFO 91947 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:30:06.017  INFO 91947 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:30:06.132  INFO 91947 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:30:06.602  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 337ms} 
+2022-12-29 19:30:06.602  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:30:06.602  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:30:06.611  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:30:06.612  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:30:06.620  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:30:06.628  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:30:06.654  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7944f09f
+2022-12-29 19:30:06.658  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:30:06.685  INFO 91947 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:30:06.722  INFO 91947 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:30:06.829  INFO 91947 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:30:06.889  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@1bf0633a
+2022-12-29 19:30:06.895  INFO 91947 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:30:06.927  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:30:06.939  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:30:06.939  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:30:06.949  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@407fd127
+2022-12-29 19:30:06.950  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@6874b232
+2022-12-29 19:30:06.952  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:30:07.032  INFO 91947 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:30:07.042  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@637b1a7a
+2022-12-29 19:30:07.042  INFO 91947 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:30:07.968  INFO 91947 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Started OpAdminBatchApplication in 4.139 seconds (JVM running for 5.154)
+2022-12-29 19:31:20.165  INFO 91947 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 10ms} 
+2022-12-29 19:31:20.168  INFO 91947 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2022-12-29 19:31:27.494  INFO 92065 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Starting OpAdminBatchApplication on users-MacBook-Pro.local with PID 92065 (/Users/user/git/inflma/op-admin/opAdminBatch/build/classes/java/main started by user in /Users/user/git/inflma/op-admin/opAdminBatch)
+2022-12-29 19:31:27.501  INFO 92065 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : No active profile set, falling back to default profiles: default
+2022-12-29 19:31:29.189  INFO 92065 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-29 19:31:29.190  INFO 92065 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-12-29 19:31:29.311  INFO 92065 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-29 19:31:29.904  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 455ms} 
+2022-12-29 19:31:29.905  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2022-12-29 19:31:29.905  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2022-12-29 19:31:29.914  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2022-12-29 19:31:29.914  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2022-12-29 19:31:29.924  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2022-12-29 19:31:29.939  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2022-12-29 19:31:29.960  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@208d96b
+2022-12-29 19:31:29.964  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:31:29.992  INFO 92065 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-29 19:31:30.026  INFO 92065 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2022-12-29 19:31:30.116  INFO 92065 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-12-29 19:31:30.173  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@e1d6aa0
+2022-12-29 19:31:30.177  INFO 92065 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-12-29 19:31:30.298  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2022-12-29 19:31:30.309  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:31:30.309  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2022-12-29 19:31:30.321  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@10562674
+2022-12-29 19:31:30.322  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@347c8191
+2022-12-29 19:31:30.323  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:31:30.405  INFO 92065 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-29 19:31:30.415  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@5a69bccd
+2022-12-29 19:31:30.415  INFO 92065 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2022-12-29 19:31:31.433  INFO 92065 --- [restartedMain] i.opadminbatch.OpAdminBatchApplication   : Started OpAdminBatchApplication in 4.496 seconds (JVM running for 5.455)
