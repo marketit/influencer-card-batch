@@ -1,12 +1,13 @@
 package inflma.opadminbatch.service;
 
-import inflma.opadminbatch.dao.PostingMapper;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.HashMap;
 
 @Service
 public interface PostingService {
 
-    List<Long> findByPostedComplete();
+    String findByPostedComplete();
+
+    void completePosting(HashMap map);
 }

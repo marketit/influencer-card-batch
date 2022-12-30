@@ -2,15 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="inflma.opadminbatch.dao.PostingMapper">
-    <select id="findByPostedComplete" resultType="Long">
-        SELECT a.activityId  FROM activities a
+    <select id="findByPostedComplete" resultType="String">
+        SELECT GROUP_CONCAT(a.activityId) FROM activities a
                                       LEFT JOIN campaign c ON a.campaignId = c.campaignId
                                       LEFT JOIN users u ON u.userId = a.userId
                                       LEFT JOIN collected_post_activities cpa ON cpa.activity_id = a.activityId
                                       LEFT JOIN collected_post cp ON cpa.collected_post_id = cp.id
                                       LEFT JOIN collected_post_tag cpt ON cpt.collected_post_id = cp.id
         WHERE a.state IN (2,3) AND json_extract(cpt.tags,'$[0]') = "검수완료" AND cp.post_status = 0 and cpa.tagStatus = 1
-          AND Date(cpa.created_at) <![CDATA[>=]]> '2022-12-09' AND DATE_ADD( cpa.created_at, INTERVAL  c.posting_maintain_period DAY) <![CDATA[<]]>  now()
+          AND Date(cpa.created_at) <![CDATA[>=]]> '2022-12-07' AND DATE_ADD( cpa.created_at, INTERVAL  c.posting_maintain_period DAY) <![CDATA[<]]>  Date('2023-01-31')
           AND a.dutyCompletedAt IS NULL
     </select>
+
+    <update id="completePosting" parameterType="map">
+        UPDATE activities
+            SET dutyCompletedAt = now()
+        WHERE activityId in(${activityId});
+    </update>
 </mapper>

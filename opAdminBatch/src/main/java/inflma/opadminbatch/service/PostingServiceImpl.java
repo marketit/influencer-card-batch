@@ -4,14 +4,20 @@ import inflma.opadminbatch.dao.PostingMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.HashMap;
 
 @Service
 @RequiredArgsConstructor
 public class PostingServiceImpl implements PostingService {
     private final PostingMapper postingMapper;
 
-    public List<Long> findByPostedComplete() {
+    @Override
+    public String findByPostedComplete() {
         return postingMapper.findByPostedComplete();
+    }
+
+    @Override
+    public void completePosting(HashMap map) {
+        postingMapper.completePosting(map);
     }
 }
