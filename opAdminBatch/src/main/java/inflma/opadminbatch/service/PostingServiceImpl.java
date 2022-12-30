@@ -22,7 +22,17 @@ public class PostingServiceImpl implements PostingService {
     }
 
     @Override
-    public void activitiesFixedPeriodLock() {
-        postingMapper.activitiesFixedPeriodLock();
+    public String activitiesFixedPeriodLock() {
+        return postingMapper.activitiesFixedPeriodLock();
+    }
+
+    @Override
+    public String activitiesPeriodLock() {
+        return postingMapper.activitiesPeriodLock();
+    }
+
+    @Override
+    public void activitiesLock(HashMap map) {
+        postingMapper.activitiesLock(map);
     }
 }
