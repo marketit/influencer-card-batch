@@ -9,4 +9,6 @@ public interface PostingMapper {
     String findByPostedComplete();
 
     void completePosting(HashMap map);
+
+    void activitiesFixedPeriodLock();
 }

@@ -20,4 +20,9 @@ public class PostingServiceImpl implements PostingService {
     public void completePosting(HashMap map) {
         postingMapper.completePosting(map);
     }
+
+    @Override
+    public void activitiesFixedPeriodLock() {
+        postingMapper.activitiesFixedPeriodLock();
+    }
 }

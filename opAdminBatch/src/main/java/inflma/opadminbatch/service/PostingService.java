@@ -10,4 +10,6 @@ public interface PostingService {
     String findByPostedComplete();
 
     void completePosting(HashMap map);
+
+    void activitiesFixedPeriodLock();
 }
