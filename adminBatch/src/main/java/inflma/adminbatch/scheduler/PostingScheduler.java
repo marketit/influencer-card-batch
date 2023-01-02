@@ -1,6 +1,6 @@
-package inflma.opadminbatch.scheduler;
+package inflma.adminbatch.scheduler;
 
-import inflma.opadminbatch.service.PostingService;
+import inflma.adminbatch.service.PostingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

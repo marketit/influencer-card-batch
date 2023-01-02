@@ -1,4 +1,4 @@
 rootProject.name = 'op-admin'
 
 include 'opAdmin'
-include 'opAdminBatch'
+include 'adminBatch'

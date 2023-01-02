@@ -1,11 +1,12 @@
-package inflma.opadminbatch.dao;
+package inflma.adminbatch.service;
 
-import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 
-@Mapper
-public interface PostingMapper {
+@Service
+public interface PostingService {
+
     String findByPostedComplete();
 
     void completePosting(HashMap map);

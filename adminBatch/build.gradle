@@ -98,3 +98,7 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+bootJar{
+    archiveFileName = 'adminBatch.jar'
+}

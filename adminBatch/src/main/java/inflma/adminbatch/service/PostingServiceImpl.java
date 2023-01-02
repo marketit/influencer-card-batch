@@ -1,6 +1,6 @@
-package inflma.opadminbatch.service;
+package inflma.adminbatch.service;
 
-import inflma.opadminbatch.dao.PostingMapper;
+import inflma.adminbatch.dao.PostingMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
