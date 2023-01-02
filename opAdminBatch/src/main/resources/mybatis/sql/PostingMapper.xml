@@ -10,7 +10,7 @@
                                       LEFT JOIN collected_post cp ON cpa.collected_post_id = cp.id
                                       LEFT JOIN collected_post_tag cpt ON cpt.collected_post_id = cp.id
         WHERE a.state IN (2,3) AND json_extract(cpt.tags,'$[0]') = "검수완료" AND cp.post_status = 0 and cpa.tagStatus = 1
-          AND Date(cpa.created_at) <![CDATA[>=]]> '2022-12-07' AND DATE_ADD( cpa.created_at, INTERVAL  c.posting_maintain_period DAY) <![CDATA[<]]>  Date('2023-01-31')
+          AND Date(cpa.created_at) <![CDATA[>=]]> '2022-12-09' AND DATE_ADD( cpa.created_at, INTERVAL  c.posting_maintain_period DAY) <![CDATA[<]]>  Date(now())
           AND a.dutyCompletedAt IS NULL
     </select>
 
