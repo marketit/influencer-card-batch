@@ -20,7 +20,7 @@ public class TransactionRequestServiceImpl {
     private final FirebaseCloudMessageService firebaseCloudMessageService;
     private final UserMapper userMapper;
 
-    public List<TransactionRequestReportDto> transactionRequestExcel(HashMap<String,Object> param){
+    public List<HashMap<String, Object>> transactionRequestExcel(HashMap<String,Object> param){
         return transactionRequestMapper.transactionRequestExcel(param);
     }
 
