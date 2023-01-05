@@ -10,9 +10,4 @@ public interface PostingMapper {
 
     void completePosting(HashMap map);
 
-    String activitiesFixedPeriodLock();
-
-    String activitiesPeriodLock();
-
-    void activitiesLock(HashMap map);
 }

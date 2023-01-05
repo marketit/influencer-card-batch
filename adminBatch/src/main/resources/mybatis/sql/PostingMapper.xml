@@ -20,34 +20,4 @@
         WHERE activityId in(${activityId});
     </update>
 
-    <select id="activitiesFixedPeriodLock" resultType="String">
-        SELECT GROUP_CONCAT( a.activityId ) from activities a
-        inner join campaign c on a.campaignId = c.campaignId
-        LEFT JOIN collected_post_activities cpa ON cpa.activity_id = a.activityId
-        LEFT JOIN collected_post cp ON cpa.collected_post_id = cp.id
-        left join campaign_assign_rule_lock carl on carl.campaign_id = c.campaignId
-        LEFT JOIN collected_post_tag cpt ON cpt.collected_post_id = cp.id
-        where a.state in (2,3) and Date(a.createdAt)  >= ('2022-12-09')
-        and carl.lock_at is not null
-        and cpt.tags is null and Date(carl.lock_at) <![CDATA[<=]]> Date(now());
-    </select>
-
-    <update id="activitiesLock">
-        update activities
-        set state = -2
-        where activityId  in(${activityId});
-    </update>
-
-    <select id="activitiesPeriodLock" resultType="String">
-        SELECT GROUP_CONCAT(a.activityId) from activities a
-        inner join campaign c on a.campaignId = c.campaignId
-        LEFT JOIN campaign_assign_rules car on car.campaign_id = c.campaignId
-        where a.state in (2,3)
-        and Date(a.createdAt)  >= ('2022-12-09')
-        and car.`order` =1
-        and car.lock_by_posting != 0
-        and c.platform_type = 0
-        and a.postedAt is null
-        and Date(DATE_ADD( a.sampleRequestedAt, INTERVAL car.lock_by_posting DAY)) <![CDATA[<=]]> Date(now()) ;
-    </select>
 </mapper>
