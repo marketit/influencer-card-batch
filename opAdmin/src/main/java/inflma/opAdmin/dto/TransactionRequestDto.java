@@ -13,4 +13,9 @@ public class TransactionRequestDto extends BaseInformation{
     private String state;
     private String created_at;
     private String paid_at;
+
+
+    public void setState(String state) {
+        this.state = state;
+    }
 }

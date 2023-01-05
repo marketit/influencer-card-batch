@@ -30,7 +30,7 @@
                created_at,
                paid_at as paid_at
         FROM account_transaction_request
-        WHERE state = 0
+        WHERE state in(${state})
         ORDER BY created_at DESC
             LIMIT #{pageOffset}, #{perPage}
     </select>
@@ -38,7 +38,7 @@
     <select id="transactionRequestWithdrawalCount" resultType="int">
         SELECT count(*)
         FROM account_transaction_request
-        WHERE state = 0
+        WHERE state in (${state})
     </select>
 
     <update id="completeTransactionRequest">

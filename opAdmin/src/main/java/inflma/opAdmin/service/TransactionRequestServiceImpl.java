@@ -10,7 +10,6 @@ import inflma.opAdmin.util.FirebaseCloudMessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
@@ -38,9 +37,13 @@ public class TransactionRequestServiceImpl {
     }
 
     public ResultPage withdrawal(TransactionRequestDto transactionRequestDto) {
-        int page = transactionRequestDto.getPage();
+        if(transactionRequestDto.getState().equals("2")){
+            transactionRequestDto.setState("0,1,-2");
+        }
 
+        int page = transactionRequestDto.getPage();
         int pageOffset = (transactionRequestDto.getPage()-1) * transactionRequestDto.getPerPage();
+
         transactionRequestDto.setPageOffset(pageOffset);
         List<TransactionRequestDto> result = transactionRequestMapper.transactionRequestWithdrawalList(transactionRequestDto);
         int withdrawalListCnt = transactionRequestMapper.transactionRequestWithdrawalCount(transactionRequestDto);

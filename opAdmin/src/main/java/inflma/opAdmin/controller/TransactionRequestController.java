@@ -39,7 +39,7 @@ public class TransactionRequestController {
     ) throws IOException {
         List<TransactionRequestReportDto> body = transactionRequestService.transactionRequestExcel(param);
         List<String> header = List.of("은행명", "계좌번호", "이름", "요청한 금액", "", "", "", "일련번호");
-
+        List<String> bodyList = List.of("");
 //        transactionRequestExcelData(response, header, body, "request");
     }
 
