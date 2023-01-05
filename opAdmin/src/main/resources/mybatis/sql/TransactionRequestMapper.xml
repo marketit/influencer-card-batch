@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="inflma.opAdmin.dao.TransactionRequestMapper" >
+<mapper namespace="inflma.opAdmin.dao.TransactionRequestMapper">
     <select id="transactionRequestExcel" resultType="map" parameterType="map">
-        SELECT
-            REPLACE ( REPLACE ( REPLACE( REPLACE ( request_info -> '$.bank' , '"', '') ,"(주택)", '') , '(외환)', '') ,'(조흥)', '')as bank ,
-            actual_refund,
-            REPLACE ( request_info -> '$.account' , '"','') as account,
-            REPLACE ( request_info -> '$.accountName', '"', '') as name,
-            request_id,
-            "마켓잇 적립금" as message
+        SELECT REPLACE(REPLACE(REPLACE(REPLACE(request_info -> '$.bank', '"', ''), "(주택)", ''), '(외환)', ''), '(조흥)',
+                       '')                                        as bank,
+               actual_refund,
+               REPLACE(request_info -> '$.account', '"', '')     as account,
+               REPLACE(request_info -> '$.accountName', '"', '') as name,
+               request_id,
+               "마켓잇 적립금"                                          as message
         FROM account_transaction_request
         WHERE state = 0
         ORDER BY created_at DESC
     </select>
 
-    <select id="transactionRequestWithdrawalList" resultType="map" parameterType="map">
-        SELECT
-            request_id,
-            REPLACE ( request_info -> '$.accountName', '"', '') as name,
-            user_id,
-            REPLACE ( REPLACE ( REPLACE( REPLACE ( request_info -> '$.bank' , '"', '') ,"(주택)", '') , '(외환)', '') ,'(조흥)', '')as bank ,
-            actual_refund,
-            case when state = 0 then'출금 요청'
-                 when state = 1 then '지급 완료'
-                 when state = -2 then '담당자 출금 요청 취소' end as state,
-            REPLACE ( request_info -> '$.account' , '"','') as account
+    <select id="transactionRequestWithdrawalList" resultType="TransactionRequestDto" parameterType="TransactionRequestDto">
+        SELECT request_id,
+               REPLACE(request_info -> '$.accountName', '"', '') as name,
+               user_id,
+               REPLACE(REPLACE(REPLACE(REPLACE(request_info -> '$.bank', '"', ''), "(주택)", ''), '(외환)', ''), '(조흥)',
+                       '')                                        as bank,
+               actual_refund,
+               case
+                   when state = 0 then '출금 요청'
+                   when state = 1 then '지급 완료'
+                   when state = -2 then '담당자 출금 요청 취소' end        as state,
+               REPLACE(request_info -> '$.account', '"', '')     as account,
+               created_at,
+               paid_at as paid_at
         FROM account_transaction_request
         WHERE state = 0
         ORDER BY created_at DESC
@@ -33,15 +36,15 @@
     </select>
 
     <select id="transactionRequestWithdrawalCount" resultType="int">
-        SELECT
-           count(*)
+        SELECT count(*)
         FROM account_transaction_request
         WHERE state = 0
     </select>
 
     <update id="completeTransactionRequest">
         UPDATE account_transaction_request
-        SET state = 1 , paid_at = now()
+        SET state   = 1,
+            paid_at = now()
         WHERE state = 0
     </update>
 
@@ -50,6 +53,33 @@
         SET state = -2
         WHERE request_id = #{request_id}
     </update>
+
+    <select id="transactionRequestMonth" resultType="map" parameterType="map">
+        SELECT u.userId                                                                     as user_id,
+               atr.request_id                                                               as request_id,
+               REPLACE(atr.request_info -> '$.bank', '"', '')                              as bank,
+               REPLACE(atr.request_info -> '$.account', '"', '')                              as account,
+               REPLACE(atr.request_info -> '$.accountName', '"', '')                       as name,
+               REPLACE(atr.request_info -> '$.jumin', '"', '')                             as jumin,
+               case when u.countryPhone = 82 or u.country = 'Korea(대한민국)' then 1 else 2 end as country,
+               '940909'                                                                     as num,
+               YEAR (atr.paid_at) as year,
+               MONTH (atr.paid_at) as month,
+               DAY (atr.paid_at) as day,
+               atr.request_price as request_price,
+               3 as tax_rate,
+               case when atr.request_price <![CDATA[>]]> 33333 then floor(atr.request_price * 0.03) else 0
+        end as income_tax,
+	floor((case when atr.request_price <![CDATA[>]]> 33333 then floor(atr.request_price * 0.03) else 0 end) * 0.1) as local_tax,
+	atr.request_price - case when atr.request_price <![CDATA[>]]> 33333 then floor(atr.request_price * 0.03) else 0
+        end - (case when atr.request_price <![CDATA[>]]> 33333 then floor(atr.request_price * 0.03) else 0 end) * 0.1 as actual_refund
+	FROM account_transaction_request atr
+    INNER JOIN users u on atr.user_id  = u.userId
+    WHERE YEAR(created_at) = #{year}
+    and MONTH(created_at) = #{month}
+    and atr.state = 1
+  ORDER BY request_id ;
+    </select>
 
 
 </mapper>

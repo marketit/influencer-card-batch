@@ -1,6 +1,7 @@
 package inflma.opAdmin.controller;
 
 import inflma.opAdmin.dto.TransactionRequestDto;
+import inflma.opAdmin.dto.TransactionRequestReportDto;
 import inflma.opAdmin.result.ResultPage;
 import inflma.opAdmin.service.TransactionRequestServiceImpl;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +28,7 @@ public class TransactionRequestController {
     @ResponseBody
     public ResultPage transactionRequest(
             TransactionRequestDto transactionRequestDto
-    ){
+    ) {
         return transactionRequestService.withdrawal(transactionRequestDto);
     }
 
@@ -36,83 +37,71 @@ public class TransactionRequestController {
             HttpServletResponse response,
             @RequestParam HashMap<String, Object> param
     ) throws IOException {
-        List<HashMap<String, Object>> body = transactionRequestService.transactionRequestExcel(param);
-        List<String> header = List.of("은행명", "계좌번호", "이름", "요청한 금액", "","","","일련번호");
+        List<TransactionRequestReportDto> body = transactionRequestService.transactionRequestExcel(param);
+        List<String> header = List.of("은행명", "계좌번호", "이름", "요청한 금액", "", "", "", "일련번호");
 
-        transactionRequestExcelData(response, header, body);
+//        transactionRequestExcelData(response, header, body, "request");
     }
 
-    @GetMapping(value="refusal")
+    @GetMapping(value = "month")
+    public void transactionRequestMonth(
+            HttpServletResponse response,
+            @RequestParam HashMap<String, Object> param) throws IOException {
+//        List<TransactionRequestReportDto> body = transactionRequestService.transactionRequestMonth(param);
+        List<HashMap<String, Object>> body = transactionRequestService.transactionRequestMonth(param);
+        List<String> header = List.of("유저아이디", "요청번호", "은행", "계좌번호", "상호(성명)", "주민등록번호", "내/외", "소득구분코드", "년", "월", "일", "지급액(세전)", "세율(%)", "소득세", "지방소득세", "지급액(세후)");
+        List<String> bodyList = List.of("user_id", "request_id", "bank","account" ,"name", "jumin", "country", "num", "year", "month", "day","request_price", "tax_rate", "income_tax", "local_tax", "actual_refund");
+
+//        transactionRequestExcelData(response, header, body, "report");
+                transactionRequestExcelData(response, header, body, bodyList, "report");
+    }
+
+    @GetMapping(value = "refusal")
     public void refusalTransactionRequest(
             @RequestParam HashMap<String, Object> param
     ) throws IOException {
         transactionRequestService.refusalTransactionRequest(param);
     }
 
-    @GetMapping(value="complete")
+    @GetMapping(value = "complete")
     public void completeTransactionRequest(
             @RequestParam HashMap<String, Object> param
-    ){
+    ) {
         transactionRequestService.completeTransactionRequest(param);
     }
 
-    private void transactionRequestExcelData(HttpServletResponse response, List<String> header, List<HashMap<String, Object>> body) throws IOException {
-        Workbook wb = new HSSFWorkbook();
-        Sheet sheet = wb.createSheet("첫번째 시트");
-        Row row;
-        Cell cell;
-        int rowNum = 0;
+        private void transactionRequestExcelData(HttpServletResponse response, List<String> header, List<HashMap<String, Object>> body, List<String> bodyList, String type) throws IOException {
+            Workbook wb = new HSSFWorkbook();
+            Sheet sheet = wb.createSheet("첫번째 시트");
+            Row row;
+            Cell cell;
+            int rowNum = 0;
 
-        // Header
-
-        row = sheet.createRow(rowNum++);
-        for (int i = 0; i < header.size(); i++) {
-            cell = row.createCell(i);
-            cell.setCellValue(header.get(i));
-        }
-
-        // Body
-        for (int i = 0; i < body.size(); i++) {
-            int cellCnt = 0;
+            // Header
             row = sheet.createRow(rowNum++);
-
-            if (body.get(i).get("bank") != null) {
-                cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("bank").toString());
-            }
-            if (body.get(i).get("account") != null) {
-                cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("account").toString());
-            }
-            if (body.get(i).get("name") != null) {
-                cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("name").toString());
-            }
-            if (body.get(i).get("request_price") != null) {
-                cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("request_price").toString());
+            for (int i = 0; i < header.size(); i++) {
+                cell = row.createCell(i);
+                cell.setCellValue(header.get(i));
             }
 
-            if (body.get(i).get("actual_refund") != null) {
-                cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("actual_refund").toString());
-            }
-            if (body.get(i).get("message") != null) {
-                cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("message").toString());
-            }
-            cell = row.createCell(cellCnt++);
-            cell.setCellValue("");
-            cell = row.createCell(cellCnt++);
-            cell.setCellValue("");
-            cell = row.createCell(cellCnt++);
-            cell.setCellValue("");
-            if (body.get(i).get("request_id") != null) {
-                cell = row.createCell(cellCnt++);
-                cell.setCellValue(body.get(i).get("request_id").toString());
-            }
+            // Body
+            for (int i = 0; i < body.size(); i++) {
+                int cellCnt = 0;
+                row = sheet.createRow(rowNum++);
+                for(int j = 0; j<bodyList.size(); j++){
+                    cell = row.createCell(cellCnt++);
+                    cell.setCellValue(body.get(i).get(bodyList.get(j)).toString());
+                }
 
-        }
+                if(type.equals("request")){
+                    cell = row.createCell(cellCnt++);
+                    cell.setCellValue("");
+                    cell = row.createCell(cellCnt++);
+                    cell.setCellValue("");
+                    cell = row.createCell(cellCnt++);
+                    cell.setCellValue("");
+                }
+            }
 
         // 컨텐츠 타입과 파일명 지정
         response.setContentType("ms-vnd/excel");

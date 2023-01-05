@@ -3,6 +3,7 @@ package inflma.opAdmin.service;
 import inflma.opAdmin.dao.TransactionRequestMapper;
 import inflma.opAdmin.dao.UserMapper;
 import inflma.opAdmin.dto.TransactionRequestDto;
+import inflma.opAdmin.dto.TransactionRequestReportDto;
 import inflma.opAdmin.result.ResultPage;
 import inflma.opAdmin.util.CommonUtil;
 import inflma.opAdmin.util.FirebaseCloudMessageService;
@@ -20,7 +21,7 @@ public class TransactionRequestServiceImpl {
     private final FirebaseCloudMessageService firebaseCloudMessageService;
     private final UserMapper userMapper;
 
-    public List<HashMap<String,Object>> transactionRequestExcel(HashMap<String,Object> param){
+    public List<TransactionRequestReportDto> transactionRequestExcel(HashMap<String,Object> param){
         return transactionRequestMapper.transactionRequestExcel(param);
     }
 
@@ -30,7 +31,7 @@ public class TransactionRequestServiceImpl {
         transactionRequestMapper.completeTransactionRequest(param);
     }
 
-    public void refusalTransactionRequest(HashMap<String, Object> param) throws IOException {
+    public void refusalTransactionRequest(HashMap<String, Object> param) {
         String pushId = userMapper.findByUserPushId(param);
 
         transactionRequestMapper.refusalTransactionRequest(param);
@@ -45,5 +46,9 @@ public class TransactionRequestServiceImpl {
         int withdrawalListCnt = transactionRequestMapper.transactionRequestWithdrawalCount(transactionRequestDto);
 
         return CommonUtil.paginate(page,withdrawalListCnt,result);
+    }
+
+    public List<HashMap<String, Object>> transactionRequestMonth(HashMap<String, Object> param) {
+        return transactionRequestMapper.transactionRequestMonth(param);
     }
 }

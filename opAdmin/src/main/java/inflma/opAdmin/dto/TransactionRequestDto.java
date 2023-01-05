@@ -1,6 +1,5 @@
 package inflma.opAdmin.dto;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,4 +11,6 @@ public class TransactionRequestDto extends BaseInformation{
     private int actual_refund;
     private String account;
     private String state;
+    private String created_at;
+    private String paid_at;
 }
