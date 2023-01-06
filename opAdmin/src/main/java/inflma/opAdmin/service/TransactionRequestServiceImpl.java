@@ -20,14 +20,8 @@ public class TransactionRequestServiceImpl {
     private final FirebaseCloudMessageService firebaseCloudMessageService;
     private final UserMapper userMapper;
 
-    public List<HashMap<String, Object>> transactionRequestExcel(HashMap<String,Object> param){
+    public List<TransactionRequestDto> transactionRequestExcel(HashMap<String,Object> param){
         return transactionRequestMapper.transactionRequestExcel(param);
-    }
-
-    public void completeTransactionRequest(HashMap<String,Object> param) {
-        String pushId = userMapper.findByUserPushId(param);
-
-        transactionRequestMapper.completeTransactionRequest(param);
     }
 
     public void refusalTransactionRequest(HashMap<String, Object> param) {
@@ -51,7 +45,7 @@ public class TransactionRequestServiceImpl {
         return CommonUtil.paginate(page,withdrawalListCnt,result);
     }
 
-    public List<HashMap<String, Object>> transactionRequestMonth(HashMap<String, Object> param) {
+    public List<TransactionRequestReportDto> transactionRequestMonth(HashMap<String, Object> param) {
         return transactionRequestMapper.transactionRequestMonth(param);
     }
 }

@@ -6,13 +6,14 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class TransactionRequestDto extends BaseInformation{
-    private Long request_id;
+    private Long requestId;
     private String name;
-    private int actual_refund;
+    private int actualRefund;
     private String account;
+    private Long userId;
     private String state;
-    private String created_at;
-    private String paid_at;
+    private String createdAt;
+    private String paidAt;
 
 
     public void setState(String state) {
