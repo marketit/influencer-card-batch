@@ -2,6 +2,7 @@ package inflma.opAdmin.service;
 
 import inflma.opAdmin.dao.TransactionRequestMapper;
 import inflma.opAdmin.dao.UserMapper;
+import inflma.opAdmin.dto.AlramListDto;
 import inflma.opAdmin.dto.TransactionRequestDto;
 import inflma.opAdmin.dto.TransactionRequestReportDto;
 import inflma.opAdmin.result.ResultPage;
@@ -47,5 +48,23 @@ public class TransactionRequestServiceImpl {
 
     public List<TransactionRequestReportDto> transactionRequestMonth(HashMap<String, Object> param) {
         return transactionRequestMapper.transactionRequestMonth(param);
+    }
+
+    public int requestComplete(HashMap<String, Object> param) {
+
+        // 완료 처리
+        String requestIds = (String) param.get("requestId");
+
+        // 로그 쌓아
+        AlramListDto requestInfo = transactionRequestMapper.findByRequestId();
+        String message = "[환급 완료] 요청하신 환급("+requestInfo.getRequestPrice()+") 처리가 완료되었습니다.";
+        requestInfo.setMessage(message);
+        transactionRequestMapper.requestLog(requestInfo);
+
+        // push 알림 보내
+
+
+        requestIds = requestIds.substring(0, requestIds.length() - 1);
+        return transactionRequestMapper.transactionRequestComplete(requestIds);
     }
 }

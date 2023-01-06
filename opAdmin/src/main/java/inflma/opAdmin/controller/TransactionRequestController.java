@@ -7,8 +7,6 @@ import inflma.opAdmin.service.TransactionRequestServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
@@ -40,6 +38,14 @@ public class TransactionRequestController {
     public List<TransactionRequestReportDto> transactionRequestMonth(
             @RequestParam HashMap<String, Object> param) {
         return transactionRequestService.transactionRequestMonth(param);
+    }
+
+
+    @GetMapping(value = "withdrawal/complete")
+    public int requestComplete(
+            @RequestParam HashMap<String, Object> param
+    ) {
+        return transactionRequestService.requestComplete(param);
     }
 
     @GetMapping(value = "refusal")

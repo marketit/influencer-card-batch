@@ -1,5 +1,6 @@
 package inflma.opAdmin.dao;
 
+import inflma.opAdmin.dto.AlramListDto;
 import inflma.opAdmin.dto.TransactionRequestDto;
 import inflma.opAdmin.dto.TransactionRequestReportDto;
 import org.apache.ibatis.annotations.Mapper;
@@ -18,4 +19,10 @@ public interface TransactionRequestMapper {
     int transactionRequestWithdrawalCount(TransactionRequestDto transactionRequestDto);
 
     List<TransactionRequestReportDto> transactionRequestMonth(HashMap<String, Object> param);
+
+    int transactionRequestComplete(Object requestId);
+
+    AlramListDto findByRequestId();
+
+    int requestLog(AlramListDto requestInfo);
 }

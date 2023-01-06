@@ -83,5 +83,19 @@
   ORDER BY request_id ;
     </select>
 
+    <update id="transactionRequestComplete">
+        update account_transaction_request
+        set state = 1, paid_at = now()
+        where request_id in (${requestId})
+    </update>
+
+    <insert id="requestLog" parameterType="AlramListDto">
+        INSERT INTO alramList(userId, text, view, createdAt, urlScheme) values(108951, #{message},1, now(),'');
+    </insert>
+
+    <select id="findByRequestId" resultType="AlramListDto" parameterType="String">
+        select request_price as requestPrice,user_id as userId  from account_transaction_request atr where request_id  = #{requestId};
+    </select>
+
 
 </mapper>

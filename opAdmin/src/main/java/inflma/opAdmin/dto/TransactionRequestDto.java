@@ -12,7 +12,6 @@ public class TransactionRequestDto extends BaseInformation{
     private String account;
     private Long userId;
     private String state;
-    private String createdAt;
     private String paidAt;
 
 
