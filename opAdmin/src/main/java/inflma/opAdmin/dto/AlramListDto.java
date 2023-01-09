@@ -7,4 +7,5 @@ public class AlramListDto {
     private int requestPrice;
     private Long userId;
     private String message;
+    private String pushId;
 }

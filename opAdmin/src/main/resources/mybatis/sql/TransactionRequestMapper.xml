@@ -94,7 +94,13 @@
     </insert>
 
     <select id="findByRequestId" resultType="AlramListDto" parameterType="String">
-        select request_price as requestPrice,user_id as userId  from account_transaction_request atr where request_id  = #{requestId};
+        select
+            request_price as requestPrice,
+            user_id as userId,
+            u.pushId as pushId
+        from account_transaction_request atr
+        INNER JOIN users u on atr.user_id = u.userId
+        where request_id  = #{requestId};
     </select>
 
 
