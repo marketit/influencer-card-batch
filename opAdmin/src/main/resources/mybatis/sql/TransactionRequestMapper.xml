@@ -90,7 +90,7 @@
     </update>
 
     <insert id="requestLog" parameterType="AlramListDto">
-        INSERT INTO alramList(userId, text, view, createdAt, urlScheme) values(108951, #{message},1, now(),'');
+        INSERT INTO alramList(userId, text, view, createdAt, urlScheme) values(#{userId}, #{message},1, now(),'');
     </insert>
 
     <select id="findByRequestId" resultType="AlramListDto" parameterType="String">

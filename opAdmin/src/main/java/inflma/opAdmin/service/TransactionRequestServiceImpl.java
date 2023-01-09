@@ -53,18 +53,20 @@ public class TransactionRequestServiceImpl {
     public int requestComplete(HashMap<String, Object> param) {
 
         // 완료 처리
-        String requestIds = (String) param.get("requestId");
+        String requestIdStr = (String) param.get("requestId");
+        String[] requestIds = requestIdStr.split(",");
 
         // 로그 쌓아
-        AlramListDto requestInfo = transactionRequestMapper.findByRequestId();
-        String message = "[환급 완료] 요청하신 환급("+requestInfo.getRequestPrice()+") 처리가 완료되었습니다.";
-        requestInfo.setMessage(message);
-        transactionRequestMapper.requestLog(requestInfo);
-
+        for(String requestId : requestIds){
+            AlramListDto requestInfo = transactionRequestMapper.findByRequestId(requestId);
+            String message = "[환급 완료] 요청하신 환급("+requestInfo.getRequestPrice()+") 처리가 완료되었습니다.";
+            requestInfo.setMessage(message);
+            transactionRequestMapper.requestLog(requestInfo);
+        }
         // push 알림 보내
 
 
-        requestIds = requestIds.substring(0, requestIds.length() - 1);
-        return transactionRequestMapper.transactionRequestComplete(requestIds);
+//        requestIds = requestIds.substring(0, requestIds.length() - 1);
+        return transactionRequestMapper.transactionRequestComplete(requestIdStr);
     }
 }

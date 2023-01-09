@@ -22,7 +22,7 @@ public interface TransactionRequestMapper {
 
     int transactionRequestComplete(Object requestId);
 
-    AlramListDto findByRequestId();
+    AlramListDto findByRequestId(String requestId);
 
-    int requestLog(AlramListDto requestInfo);
+    void requestLog(AlramListDto requestInfo);
 }
