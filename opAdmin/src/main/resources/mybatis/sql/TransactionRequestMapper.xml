@@ -50,12 +50,6 @@
         WHERE state = 0
     </update>
 
-    <update id="refusalTransactionRequest" parameterType="map">
-        UPDATE account_transaction_request
-        SET state = -2
-        WHERE request_id = #{request_id}
-    </update>
-
     <select id="transactionRequestMonth" resultType="TransactionRequestReportDto" parameterType="map">
         SELECT u.userId                                                                     as userId,
                atr.request_id                                                               as requestId,
@@ -83,9 +77,9 @@
   ORDER BY request_id ;
     </select>
 
-    <update id="transactionRequestComplete">
+    <update id="transactionRequestChangeState" parameterType="TransactionRequestState">
         update account_transaction_request
-        set state = 1, paid_at = now()
+        set state = #{state}, paid_at = now()
         where request_id in (${requestId})
     </update>
 
@@ -100,7 +94,7 @@
             u.pushId as pushId
         from account_transaction_request atr
         INNER JOIN users u on atr.user_id = u.userId
-        where request_id  = #{requestId};
+        where request_id  = #{requestId} AND state = 0;
     </select>
 
 

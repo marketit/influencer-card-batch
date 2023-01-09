@@ -3,6 +3,7 @@ package inflma.opAdmin.dao;
 import inflma.opAdmin.dto.AlramListDto;
 import inflma.opAdmin.dto.TransactionRequestDto;
 import inflma.opAdmin.dto.TransactionRequestReportDto;
+import inflma.opAdmin.dto.TransactionRequestState;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.HashMap;
@@ -12,15 +13,13 @@ import java.util.List;
 public interface TransactionRequestMapper {
     List<TransactionRequestDto> transactionRequestExcel(HashMap<String, Object> param);
 
-    void refusalTransactionRequest(java.util.HashMap<java.lang.String,java.lang.Object> param);
-
     List<TransactionRequestDto> transactionRequestWithdrawalList(TransactionRequestDto transactionRequestDto);
 
     int transactionRequestWithdrawalCount(TransactionRequestDto transactionRequestDto);
 
     List<TransactionRequestReportDto> transactionRequestMonth(HashMap<String, Object> param);
 
-    int transactionRequestComplete(Object requestId);
+    int transactionRequestChangeState(TransactionRequestState transactionRequestState);
 
     AlramListDto findByRequestId(String requestId);
 

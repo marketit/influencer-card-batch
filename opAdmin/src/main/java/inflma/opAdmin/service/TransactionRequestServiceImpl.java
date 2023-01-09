@@ -1,9 +1,8 @@
 package inflma.opAdmin.service;
 
 import inflma.opAdmin.dao.TransactionRequestMapper;
-import inflma.opAdmin.dto.AlramListDto;
-import inflma.opAdmin.dto.TransactionRequestDto;
-import inflma.opAdmin.dto.TransactionRequestReportDto;
+import inflma.opAdmin.dto.*;
+import inflma.opAdmin.result.ResultBody;
 import inflma.opAdmin.result.ResultPage;
 import inflma.opAdmin.util.CommonUtil;
 import inflma.opAdmin.util.FirebaseCloudMessageService;
@@ -47,17 +46,21 @@ public class TransactionRequestServiceImpl {
     @Transactional(rollbackFor = IOException.class)
     public int requestComplete(HashMap<String, Object> param) {
 
+
         // param 문자열 처리
         String requestIdStr = (String) param.get("requestId");
         requestIdStr = requestIdStr.substring(0, requestIdStr.length() - 1);
         String[] requestIds = requestIdStr.split(",");
+        int resultCount = 0;
 
         for(String requestId : requestIds){
             AlramListDto requestInfo = transactionRequestMapper.findByRequestId(requestId);
             requestInfoNullCheck(requestInfo);
+
+            TransactionRequestState transactionRequestState = TransactionRequestState.of(Long.parseLong(requestId),1);
+            resultCount += transactionRequestMapper.transactionRequestChangeState(transactionRequestState);
         }
-        // 완료 처리
-        return transactionRequestMapper.transactionRequestComplete(requestIdStr);
+        return resultCount;
     }
 
     private void requestInfoNullCheck(AlramListDto requestInfo) {
@@ -68,13 +71,24 @@ public class TransactionRequestServiceImpl {
             transactionRequestMapper.requestLog(requestInfo);
 
             // push 알림 보내기
-            pushMessage(requestInfo.getPushId(),"환급완료 알림",message);
+            pushMessage(requestInfo.getPushId(),"출금 완료 안내",message);
         }
     }
 
+    @Transactional
+    public ResultBody withdrawalCancel(TransactionRequestCancelDto param) {
+        String[] requestIds = param.getRequestId().split(",");
+        for(String requestId : requestIds){
+            AlramListDto alramListDto = transactionRequestMapper.findByRequestId(requestId);
+            alramListDto.setMessage(param.getPushContent());
+            transactionRequestMapper.requestLog(alramListDto);
+            pushMessage(alramListDto.getPushId(),param.getPushTitle(),param.getPushContent());
 
+            TransactionRequestState transactionRequestState = TransactionRequestState.of(Long.parseLong(requestId),-2);
+            transactionRequestMapper.transactionRequestChangeState(transactionRequestState);
+        }
 
-    public void refusalTransactionRequest(HashMap<String, Object> param) {
+        return new ResultBody();
     }
 
     private void pushMessage(String targetToken, String title, String message) {

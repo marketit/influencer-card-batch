@@ -1,7 +1,9 @@
 package inflma.opAdmin.controller;
 
+import inflma.opAdmin.dto.TransactionRequestCancelDto;
 import inflma.opAdmin.dto.TransactionRequestDto;
 import inflma.opAdmin.dto.TransactionRequestReportDto;
+import inflma.opAdmin.result.ResultBody;
 import inflma.opAdmin.result.ResultPage;
 import inflma.opAdmin.service.TransactionRequestServiceImpl;
 import lombok.RequiredArgsConstructor;
@@ -48,11 +50,12 @@ public class TransactionRequestController {
         return transactionRequestService.requestComplete(param);
     }
 
-    @GetMapping(value = "refusal")
-    public void refusalTransactionRequest(
-            @RequestParam HashMap<String, Object> param
+    @GetMapping(value = "withdrawal/cancel")
+    @ResponseBody
+    public ResultBody withdrawalCancel(
+            TransactionRequestCancelDto param
     ) {
-        transactionRequestService.refusalTransactionRequest(param);
+        return transactionRequestService.withdrawalCancel(param);
     }
 
 }
