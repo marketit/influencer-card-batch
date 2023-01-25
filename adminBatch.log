@@ -1,0 +1,31 @@
+2023-01-13 14:35:31.370  INFO 12396 --- [restartedMain] inflma.adminbatch.AdminBatchApplication  : Starting AdminBatchApplication on johnui-MacBookPro.local with PID 12396 (/Users/john/Documents/op-admin/adminBatch/build/classes/java/main started by john in /Users/john/Documents/op-admin)
+2023-01-13 14:35:31.378  INFO 12396 --- [restartedMain] inflma.adminbatch.AdminBatchApplication  : No active profile set, falling back to default profiles: default
+2023-01-13 14:35:33.051  INFO 12396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-13 14:35:33.051  INFO 12396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2023-01-13 14:35:33.134  INFO 12396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-13 14:35:33.618  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection opened. {executed in 371ms} 
+2023-01-13 14:35:33.619  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2023-01-13 14:35:33.619  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getNetworkTimeout() returned 0
+2023-01-13 14:35:33.630  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isReadOnly() returned false
+2023-01-13 14:35:33.630  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getAutoCommit() returned true
+2023-01-13 14:35:33.639  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.isValid(1) returned true
+2023-01-13 14:35:33.649  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getTransactionIsolation() returned 4
+2023-01-13 14:35:33.676  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@10cf52d4
+2023-01-13 14:35:33.680  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2023-01-13 14:35:33.704  INFO 12396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-13 14:35:33.735  INFO 12396 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2023-01-13 14:35:33.825  INFO 12396 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2023-01-13 14:35:33.891  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@500db6c
+2023-01-13 14:35:33.897  INFO 12396 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-01-13 14:35:33.933  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getCatalog() returned ihostit
+2023-01-13 14:35:33.943  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2023-01-13 14:35:33.943  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getSchema() returned null
+2023-01-13 14:35:33.955  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@6b9fb286
+2023-01-13 14:35:33.956  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@2c4aab16
+2023-01-13 14:35:33.958  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2023-01-13 14:35:34.032  INFO 12396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-13 14:35:34.042  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaDataUsingInfoSchema@7e463f1
+2023-01-13 14:35:34.042  INFO 12396 --- [restartedMain] log4jdbc.log4j2                          : 1. Connection.clearWarnings() returned 
+2023-01-13 14:35:34.992  INFO 12396 --- [restartedMain] inflma.adminbatch.AdminBatchApplication  : Started AdminBatchApplication in 4.211 seconds (JVM running for 5.894)
+2023-01-13 14:36:38.727  INFO 12396 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection closed. {executed in 20ms} 
+2023-01-13 14:36:38.731  INFO 12396 --- [HikariPool-1 connection closer] log4jdbc.log4j2                          : 1. Connection.close() returned 
